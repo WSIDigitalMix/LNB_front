@@ -1,0 +1,11 @@
+.o-stack {
+    --space: #{$baseline1};
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    & > * + * {
+        margin-top: $baseline1;
+        margin-top: var(--space);
+    }
+} 
