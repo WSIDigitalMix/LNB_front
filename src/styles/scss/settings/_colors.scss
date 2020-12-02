@@ -1,5 +1,42 @@
-$colors: (
-    'primary'   : #698cff,
-    'white'     : #ffffff,
-    'black'     : #000000
+$primary: #9C3337FF;
+$secondary: #FCEE81FF;
+$white: #FFF;
+$black: #444A51;
+
+$lighten: 5;
+$darken: 25;
+
+$colors-iota: (
+    'primary'   : $primary,
+    'secondary' : $secondary,
+    'white'     : $white,
+    'black'     : $black
 );
+
+$colors: (
+    primary: (
+        base: $primary,
+        light: lighten($primary, $lighten),
+        dark: darken($primary, $darken),
+    ),
+    secondary: (
+        base: $secondary,
+        light: lighten($secondary, $lighten),
+        dark: darken($secondary, $darken),
+    ),
+    white: (
+        base: $white,
+        light: lighten($white, $lighten),
+        dark: darken($white, $darken),
+    ),
+    black: (
+        base: $black,
+        light: lighten($black, $lighten),
+        dark: darken($black, $darken),
+    ),
+);
+
+@function clr($base, $shade: base) {
+    $color: map-get(map-get($colors, $base), $shade);
+    @return $color;
+}
