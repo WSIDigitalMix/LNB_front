@@ -11,7 +11,7 @@ let dev = {
 		],
 	},
 	devServer: {
-		contentBase: './src/handlebars',
+		contentBase: ['./src/handlebars', './src/js'],
 		watchContentBase: true,
 		hotOnly: true,
 		host: '0.0.0.0',

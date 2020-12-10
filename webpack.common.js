@@ -3,7 +3,7 @@ const HtmlPlugin = require('html-webpack-plugin')
 const HbsPlugin = require('handlebars-webpack-plugin')
 
 module.exports = {
-	entry: './src/index.js',
+	entry: './src/js/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'index.bundle.js',
@@ -11,6 +11,21 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				test: /\.(hbs|handlebars)$/,
+				use: {
+					loader: 'handlebars-loader',
+					query: {
+						helperDirs: [
+							path.join(__dirname, 'src', 'handlebars', 'helpers'),
+						],
+						partialDirs: [
+							path.join(__dirname, 'src', 'handlebars', 'partials'),
+						],
+						inlineRequires: '\/assets\/',
+					},
+				},
+			},
 			{
 				test: /\.html$/,
 				use: {
@@ -28,25 +43,27 @@ module.exports = {
 					},
 				},
 			},
-
 			{
 				test: /\.(jpg|jpeg|svg|gif|png)$/,
 				use: {
 					loader: 'file-loader',
 					options: {
+						name: '[name].[hash].[ext]',
 						outputPath: 'imgs',
+						esModule: false,
 					},
 				},
 			},
 		],
 	},
 	plugins: [
-		new HbsPlugin({
-			entry: path.join(process.cwd(), 'src', 'handlebars', '*.hbs'),
-			output: path.join(process.cwd(), 'dist', '[name].html'),
-			partials: [
-				path.join(process.cwd(), 'src', 'handlebars', 'includes', '*', '*.hbs'),
-			],
+		new HtmlPlugin({
+			template: path.join(__dirname, 'src', 'handlebars', 'index.hbs'),
+
+		}),
+		new HtmlPlugin({
+			template: path.join(__dirname, 'src', 'handlebars', 'blocks.hbs'),
+			filename: 'blocks.html'
 		}),
 	],
 }
