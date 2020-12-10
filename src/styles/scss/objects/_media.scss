@@ -6,7 +6,7 @@
  * Type: Boolean
  */
 
-$iota-objs-media-aligned: false;
+$iota-objs-media-aligned: true;
 
 
 /**
@@ -39,7 +39,9 @@ $iota-objs-media-gutter-default: $iota-global-gutter-default;
  * Type: Map
  */
 
-$iota-objs-media-gutter-extra: ();
+$iota-objs-media-gutter-extra: (
+    g1: $baseline1,
+);
 
 
 /**

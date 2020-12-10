@@ -1,0 +1,12 @@
+@mixin transition($properties: all, $speed: 0.15s, $timing: ease-in-out, $delay: 0s){
+    $speed: $speed;
+    $timing: $timing;
+    $delay: $delay;
+    $transitions: ();
+
+    @each $property in $properties {
+        $transition: $property $speed $timing $delay;
+        $transitions: append($transitions, $transition, comma);
+    }
+    transition: $transitions;
+}

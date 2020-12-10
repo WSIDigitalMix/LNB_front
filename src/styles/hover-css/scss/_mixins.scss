@@ -1,0 +1,51 @@
+// prefix declarations
+@mixin prefixed($property, $value) {
+  @if $hvr-webkit == true {
+    -webkit-#{$property}: #{$value};
+  }
+
+  @if $hvr-moz == true {
+    -moz-#{$property}: #{$value};
+  }
+
+  @if $hvr-ms == true {
+    -ms-#{$property}: #{$value};
+  }
+
+  @if $hvr-o == true {
+    -o-#{$property}: #{$value};
+  }
+
+  #{$property}: #{$value};
+}
+
+// prefix keyframes
+@mixin keyframes($name) {
+  @if $hvr-webkit == true {
+    @-webkit-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $hvr-moz == true {
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $hvr-ms == true {
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @if $hvr-o == true {
+    @-o-keyframes #{$name} {
+      @content;
+    }
+  }
+
+  @keyframes #{$name} {
+    @content;
+  }
+}

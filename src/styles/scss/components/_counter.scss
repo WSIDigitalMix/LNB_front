@@ -1,0 +1,50 @@
+$ns: $iota-global-components-namespace;
+
+.#{$ns}counter {
+    @include borders($color: $primary);
+    @include roundedCorners;
+    display: inline-flex;
+    min-width: 115px;
+    max-width: 200px;
+    
+    color: $primary;
+    background-color: $white;
+
+    font-size: 2rem;
+
+    overflow: hidden;
+
+    &__less,
+    &__more {
+        background-color: transparent;
+        color: inherit;
+        width: 35px;
+        font-size: inherit;
+        cursor: pointer;
+    }
+
+    &__less {
+        @include sweep-to-right;
+    }
+
+    &__more {
+        @include sweep-to-left;
+    }
+
+    &__input {
+        border: none;
+        color: inherit;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        width: calc(100% - 80px);
+        text-align: center;
+        font-size: 1.2rem;
+
+        &::-webkit-inner-spin-button, 
+        &::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    }
+}

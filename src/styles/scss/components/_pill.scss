@@ -1,0 +1,22 @@
+$ns: $iota-global-components-namespace;
+
+.#{$ns}pill {
+    @include roundedCorners(50%);
+    @include iota-type(map-get($global-type-sizes, base));
+
+    display: inline-block;
+
+    padding: $baseline $baseline1;
+    background-color: clr('primary');
+    color: clr('white');
+    text-align: center;
+
+    &__text {
+        text-transform: uppercase;
+    }
+
+    &--secondary {
+        background-color: clr('secondary');
+        color: clr('primary');
+    }
+}

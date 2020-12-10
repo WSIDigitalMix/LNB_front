@@ -4,7 +4,7 @@
  * Type: Boolean
  */
 
-$iota-utils-display-res: false;
+$iota-utils-display-res: true;
 
 
 /**
@@ -23,11 +23,12 @@ $iota-utils-display-breakpoints: $iota-global-breakpoints;
  * Type: String
  */
 
-$iota-utils-display-namespace         : '';
-$iota-utils-display-block-name        : 'block';
-$iota-utils-display-hidden-name       : 'hidden';
-$iota-utils-display-inline-name       : 'inline';
-$iota-utils-display-inline-block-name : 'inline-block';
-
+$iota-utils-display-namespace             : '';
+$iota-utils-display-flex-name             : 'flex';
+$iota-utils-display-block-name            : 'block';
+$iota-utils-display-hidden-name           : 'hidden';
+$iota-utils-display-inline-name           : 'inline';
+$iota-utils-display-inline-block-name     : 'inline-block';
+$iota-utils-display-visually-hidden-name  : 'visually-hidden';
 
 @import 'node_modules/iotacss/utilities/display';

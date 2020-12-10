@@ -1,0 +1,43 @@
+// DEFAULT OPTIONS
+
+// Prefix for Hover class names
+$hvr-nameSpace: 'hvr' !default;
+
+// Durations
+$hvr-fastDuration: .1s !default;
+$hvr-mediumDuration: .3s !default;
+$hvr-slowDuration: .5s !default;
+
+// Colors
+$hvr-primaryColor: #e1e1e1 !default;
+$hvr-secondaryColor: #666 !default;
+$hvr-highlightColor: #ccc !default;
+$hvr-activeColor: #2098D1 !default;
+$hvr-shadowColor: rgba(0, 0, 0, .6) !default;
+
+// Speech bubbles options
+$hvr-tipWidth: 10px !default;  //the width of the speech bubble tip
+$hvr-tipHeight: 10px !default; //the height of the speech bubble tip
+$hvr-tipColor: $hvr-primaryColor !default;
+
+// Arrows options
+$hvr-spaceBetweenTextAndArrows: 2.2em !default;
+
+// Curl dimensions
+$hvr-curlWidth: 25px !default;
+$hvr-curlHeight: 25px !default;
+
+// Curl colors
+$hvr-revealAreaColor: white !default;    // reveal area behind the curl
+$hvr-curlLineColor: #aaa !default;       // crease line
+$hvr-curlTransitionColor: #ccc !default;	// color transitioning from crease line to final color
+$hvr-curlLastColor: white !default;		// final color of the back of the curl
+
+// Browser Prefixes - Which CSS prefixes should be used?
+$hvr-webkit: true !default;
+$hvr-moz: false !default;
+$hvr-ms: false !default;
+$hvr-o: false !default;
+
+// Compile with or without classes
+$hvr-includeClasses: true !default;

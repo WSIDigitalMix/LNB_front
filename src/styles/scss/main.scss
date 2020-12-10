@@ -1,11 +1,26 @@
 @import '~modularscale-sass/stylesheets/modularscale';
 
+@import '../animate-css/animate';
+
 @import 'functions/type';
 
 @import 'settings/baseline';
 @import 'settings/spaces';
 @import 'settings/core';
 @import 'settings/colors';
+@import 'settings/type';
+
+@import 'settings/hover-css-vars';
+@import '../hover-css/scss/options';
+@import '../hover-css/scss/mixins';
+@import '../hover-css/scss/hacks';
+@import '../hover-css/scss/effects/2d-transitions/float';
+@import '../hover-css/scss/effects/background-transitions/sweep-to-right';
+@import '../hover-css/scss/effects/background-transitions/sweep-to-left';
+
+@import 'mixins/transitions';
+@import 'mixins/roundedCorners';
+@import 'mixins/borders';
 
 @import 'tools/core';
 @import 'tools/breakpoint';
@@ -14,6 +29,18 @@
 
 @import 'base/initialize';
 @import 'base/body';
+@import 'base/base';
+
+@import 'layout/footer';
+
+@import 'components/btn';
+@import 'components/icon';
+@import 'components/counter';
+@import 'components/price-tag';
+@import 'components/product-card';
+@import 'components/pill';
+@import 'components/slider';
+@import 'components/dot-heading';
 
 @import 'objects/container';
 @import 'objects/type';
@@ -41,3 +68,4 @@
 @import 'utilities/text';
 @import 'utilities/transform';
 @import 'utilities/weight';
+@import 'utilities/box-shadow';

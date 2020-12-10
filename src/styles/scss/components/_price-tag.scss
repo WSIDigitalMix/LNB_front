@@ -1,0 +1,130 @@
+$ns: $iota-global-components-namespace;
+$priceCentsOffset: 20px;
+
+.#{$ns}price-tag {
+	color: $black;
+	font-size: 1.2rem;
+	font-weight: 500;
+	position: relative;
+	display: inline-block;
+
+	&__tag {
+		display: inline-block;
+		position: relative;
+		margin: 0;
+        font-weight: 500;
+        padding-right: #{$priceCentsOffset};
+	}
+
+	&__cents {
+		position: absolute;
+		top: 0;
+		right: 0;
+		font-size: 0.8rem;
+		font-weight: 300;
+    }
+
+    &__original-tag {
+        position: absolute;
+        right: calc(100% + 5px);
+        bottom: 25%;
+        font-weight: 300;
+        font-size: 0.9rem;
+        padding-right: #{$priceCentsOffset - 5px};
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: clr('error');
+        }
+
+        & .#{$ns}price-tag__cents {
+            font-size: 0.7rem;
+        }
+    }
+}
+
+// v0
+// $ns: $iota-global-components-namespace;
+
+// .#{$ns}price {
+// 	color: $black;
+// 	font-size: 1.2rem;
+// 	font-weight: 500;
+// 	position: relative;
+// 	display: inline-block;
+
+// 	&__price,
+// 	&__discounted-price {
+// 		display: inline-block;
+// 		position: relative;
+// 		margin: 0;
+// 		font-weight: 500;
+
+// 		.#{$ns}price--with-iva & {
+// 			padding-bottom: 15px;
+// 		}
+
+// 		.#{$ns}price--with-iva &::after {
+// 			text-align: center;
+// 			content: 'IVA incluido';
+// 			position: absolute;
+// 			width: 150%;
+// 			bottom: 0;
+// 			left: 50%;
+// 			transform: translateX(-50%);
+// 			font-size: 0.6rem;
+// 			font-weight: 300;
+// 		}
+
+// 		.#{$ns}price--with-cents & {
+// 			padding-right: 20px;
+// 		}
+// 	}
+
+// 	&__price {
+// 		.#{$ns}price--with-discounted-price & {
+// 			color: clr('black', 'light');
+// 			position: absolute;
+// 			left: -110%;
+// 			transform: translateY(-30%);
+// 			padding-bottom: 0;
+
+// 			.product-card__price-container & {
+// 				font-size: 1rem;
+// 				left: 0;
+// 				bottom: 100%;
+// 				transform: translateY(20%);
+// 			}
+
+// 			.cart-item__price-container & {
+// 				font-size: 1rem;
+// 				left: -10%;
+// 				bottom: 100%;
+// 				transform: none;
+// 			}
+
+// 			&::after {
+// 				content: '';
+// 				height: 1px;
+// 				width: 100%;
+// 				background-color: clr('error');
+// 				top: 50%;
+// 				left: 0;
+// 				transform: none;
+// 			}
+// 		}
+// 	}
+
+// 	&__cents {
+// 		position: absolute;
+// 		top: 0;
+// 		right: 0;
+// 		font-size: 0.8rem;
+// 		font-weight: 300;
+// 	}
+// }

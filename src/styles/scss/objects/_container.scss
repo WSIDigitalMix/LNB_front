@@ -62,7 +62,14 @@ $iota-objs-container-size-default: (
  * Type: Map
  */
 
-$iota-objs-container-size-extra: ();
+$iota-objs-container-size-extra: (
+    small: (
+        null    : 100%,
+        sm      : 480px,
+        md      : 768px,
+        lg      : 1024px,
+    )
+);
 
 
 @import 'node_modules/iotacss/objects/container';

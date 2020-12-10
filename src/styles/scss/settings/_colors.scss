@@ -1,42 +1,49 @@
 $primary: #9C3337FF;
 $secondary: #FCEE81FF;
 $white: #FFF;
-$black: #444A51;
+$black: #212429;
+$errorColor: #ce2d10;
 
-$lighten: 5;
-$darken: 25;
+$lighten: 10;
+$darken: 10;
 
 $colors-iota: (
     'primary'   : $primary,
     'secondary' : $secondary,
     'white'     : $white,
-    'black'     : $black
+    'black'     : $black,
+    'error'     : $errorColor
 );
 
 $colors: (
-    primary: (
-        base: $primary,
-        light: lighten($primary, $lighten),
-        dark: darken($primary, $darken),
+    'primary': (
+        'base': $primary,
+        'light': lighten($primary, $lighten),
+        'dark': darken($primary, $darken),
     ),
-    secondary: (
-        base: $secondary,
-        light: lighten($secondary, $lighten),
-        dark: darken($secondary, $darken),
+    'secondary': (
+        'base': $secondary,
+        'light': lighten($secondary, $lighten),
+        'dark': darken($secondary, $darken),
     ),
-    white: (
-        base: $white,
-        light: lighten($white, $lighten),
-        dark: darken($white, $darken),
+    'white': (
+        'base': $white,
+        'light': lighten($white, $lighten),
+        'dark': darken($white, $darken),
     ),
-    black: (
-        base: $black,
-        light: lighten($black, $lighten),
-        dark: darken($black, $darken),
+    'black': (
+        'base': $black,
+        'light': lighten($black, $lighten),
+        'dark': darken($black, $darken),
+    ),
+    'error': (
+        'base': $errorColor,
+        'light': lighten($errorColor, $lighten),
+        'dark': darken($errorColor, $darken),
     ),
 );
 
-@function clr($base, $shade: base) {
-    $color: map-get(map-get($colors, $base), $shade);
+@function clr($color, $shade: base) {
+    $color: map-get(map-get($colors, $color), $shade);
     @return $color;
 }

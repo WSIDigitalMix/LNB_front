@@ -1,0 +1,33 @@
+/* Curl Bottom Left */
+@mixin curl-bottom-left {
+	@include hacks();
+	position: relative;
+
+	&:before {
+		pointer-events: none;
+		position: absolute;
+		content: '';
+		height: 0;
+		width: 0;
+		bottom: 0;
+		left: 0;
+		background: $hvr-revealAreaColor; /* IE9 */
+		background: linear-gradient(
+			45deg,
+			$hvr-revealAreaColor 45%,
+			$hvr-curlLineColor 50%,
+			$hvr-curlTransitionColor 56%,
+			$hvr-curlLastColor 80%
+		);
+		box-shadow: 1px -1px 1px rgba(0, 0, 0, .4);
+		@include prefixed(transition-duration, $hvr-mediumDuration);
+		@include prefixed(transition-property, "width, height");
+	}
+
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		width: $hvr-curlWidth;
+		height: $hvr-curlHeight;
+	}
+}

@@ -1,0 +1,25 @@
+/* Bubble Left */
+@mixin bubble-left {
+	@include hacks();
+	position: relative;
+
+	&:before {
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		content: '';
+		border-style: solid;
+		@include prefixed(transition-duration, $hvr-mediumDuration);
+		@include prefixed(transition-property, transform);
+		top: calc(50% - #{$hvr-tipHeight});
+		left: 0;
+		border-width: $hvr-tipHeight $hvr-tipWidth $hvr-tipHeight 0;
+		border-color: transparent $hvr-tipColor transparent transparent;
+	}
+
+	&:hover:before,
+	&:focus:before,
+	&:active:before {
+		@include prefixed(transform, translateX(-($hvr-tipWidth)));
+	}
+}

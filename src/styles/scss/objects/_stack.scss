@@ -1,4 +1,6 @@
-.o-stack {
+$ns: $iota-global-objects-namespace;
+
+.#{$ns}stack {
     --space: #{$baseline1};
     display: flex;
     flex-direction: column;

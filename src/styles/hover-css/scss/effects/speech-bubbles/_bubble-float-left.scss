@@ -1,0 +1,30 @@
+/* Bubble Float Left */
+@mixin bubble-float-left {
+	@include hacks();
+	position: relative;
+	@include prefixed(transition-duration, $hvr-mediumDuration);
+	@include prefixed(transition-property, transform);
+
+	&:before {
+		position: absolute;
+		z-index: -1;
+		content: '';
+		top: calc(50% - #{$hvr-tipHeight});
+		left: 0;
+		border-style: solid;
+		border-width: $hvr-tipHeight $hvr-tipWidth $hvr-tipHeight 0;
+		border-color: transparent $hvr-tipColor transparent transparent;
+		@include prefixed(transition-duration, $hvr-mediumDuration);
+		@include prefixed(transition-property, transform);
+	}
+
+	&:hover,
+	&:focus,
+	&:active {
+		@include prefixed(transform, translateX($hvr-tipWidth));
+
+		&:before {
+			@include prefixed(transform, translateX(-($hvr-tipWidth)));
+		}
+	}
+}

@@ -1,0 +1,57 @@
+$ns: $iota-global-components-namespace;
+
+.#{$ns}btn {
+    @include iota-type(map-get($global-type-sizes, base));
+    @include roundedCorners();
+    @include float();
+    @include transition(background-color transform);
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    cursor: pointer;
+
+    padding: $baseline $baseline1;
+    background-color: $primary;
+    color: $white;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+        background-color: clr('primary', 'light');
+    }
+
+    &--simple-transition {
+        @include transition(background-color);
+
+        &:hover,
+        &:focus {
+            transform: initial;
+        }
+    }
+
+    &--icon-only {
+        padding: $baseline;
+    }
+
+    &--white {
+        background-color: $white;
+        color: $primary;
+
+        &:hover,
+        &:focus {
+            background-color: clr('white', 'dark');
+        }
+    }
+
+    &--black {
+        background-color: $black;
+
+        &:hover,
+        &:focus {
+            background-color: clr('black', 'light');
+        }
+    }
+}
