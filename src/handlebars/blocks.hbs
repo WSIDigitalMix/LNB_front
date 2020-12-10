@@ -1,0 +1,144 @@
+{{!-- BLOCKS PAGE --}}
+{{#>layouts/default page='Blocks'}}
+    {{!-- BTN BLOCK --}}
+    {{#>struct/grid_card}}
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/btn }}
+                Button
+            {{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/btn class="c-btn--icon-only c-btn--float-transition c-btn--simple-transition"}}
+                <img src="../assets/icons/cart-icon-white.svg" class="c-icon--40" alt="">
+            {{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/btn class=""}}
+                <img src="../assets/icons/check-mark-icon-white.svg" class="u-mr2 c-icon" alt=""> Button
+            {{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/btn href="#"}}Link{{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3 u-bgcolor-primary">
+            {{#>block/btn class="c-btn--white "}}
+                <img src="../assets/icons/check-mark-icon-red.svg" class="u-mr2 c-icon" alt=""> Button
+            {{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3 u-bgcolor-primary">
+            {{#>block/btn href="#" class="c-btn--white"}}Link{{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/btn class="c-btn--black"}}
+                <img src="../assets/icons/check-mark-icon-white.svg" class="u-mr2 c-icon" alt=""> Button
+            {{/block/btn}}
+        </div>
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/btn href="#" class="c-btn--black o-type-h3"}}Link{{/block/btn}}
+        </div>
+
+    {{/struct/grid_card}}
+
+    {{!-- COUNTER BLOCK --}}
+    {{#>struct/grid_card}}
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{>block/counter}}
+        </div>
+    
+    {{/struct/grid_card}}
+
+    {{!-- PRICE BLOCK --}}
+    {{#>struct/grid_card}}
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{>block/price-tag}}
+        </div>
+    
+    {{/struct/grid_card}}
+
+    {{!-- PILL BLOCK --}}
+    {{#>struct/grid_card}}
+
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/pill}}Oferta{{/block/pill}}
+        </div>
+        <div class="u-flex u-jc-center u-ai-center u-p3">
+            {{#>block/pill class="c-pill--secondary"}}Oferta{{/block/pill}}
+        </div>
+    
+    {{/struct/grid_card}}
+
+    {{!-- PRODUCT-CARD BLOCK --}}
+    {{#>struct/grid_card}}
+
+        <div class="u-flex u-jc-center u-ai-center u-p4">
+            {{>block/product-card}}
+        </div>
+        <div class="u-flex u-jc-center u-ai-center u-p4">
+            {{>block/product-card}}
+        </div>
+        <div class="u-flex u-jc-center u-ai-center u-p4">
+            {{>block/product-card}}
+        </div>
+        <div class="u-flex u-jc-center u-ai-center u-p4">
+            {{>block/product-card}}
+        </div>
+        <div class="u-flex u-jc-center u-ai-center u-p4">
+            {{>block/product-card}}
+        </div>
+    
+    {{/struct/grid_card}}
+
+    {{!-- SLIDER BLOCK --}}
+    {{#>struct/grid_card}}
+
+        <div class="o-grid__col">
+            {{>block/slider}}
+        </div>
+
+    {{/struct/grid_card}}
+
+    {{!-- ICON MEDIA BLOCK AND GRID OF ICON MEDIA BLOCKS --}}
+    {{#>struct/grid_card}}
+
+        <div class="o-grid__col u-flex u-jc-center u-bgcolor-primary u-p3@md u-p1">
+            <div class="o-grid o-grid--center o-grid--g2 u-jc-center u-5/6@lg u-m0 u-pb4">
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Seleccioná tu producto</div>{{/block/icon-media}}</div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Lorem ipsum dolor sit. Lorem</div>{{/block/icon-media}}</div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Excepturi ab architecto magni accusamus</div>{{/block/icon-media}}</div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">itaque? Dignissimos, suscipit</div>{{/block/icon-media}}</div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">sit amet consectetur adipisicing elit</div>{{/block/icon-media}}</div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Lorem ipsum</div>{{/block/icon-media}}</div>
+            </div>
+        </div>
+
+    {{/struct/grid_card}}
+
+
+    {{!-- ICON MEDIA BLOCK SMALL ICON --}}
+    {{#>struct/grid_card}}
+
+        <div class="o-grid__col u-flex u-jc-center u-bgcolor-primary u-p3">
+            {{#>block/icon-media iconClass='c-icon--40'}}Lorem ipsum{{/block/icon-media}}
+        </div>
+
+    {{/struct/grid_card}}
+
+    {{!-- ICON MEDIA BLOCK SMALL ICON --}}
+    <div class="u-box-shadow u-mv4 u-p3 u-color-black u-flex u-jc-center">
+        <h1 class="c-dot-heading c-dot-heading--dot-below o-type-h1 u-color-primary">Market</h1>
+    </div>
+
+    {{!-- FOOTER --}}
+    {{>block/footer}}
+{{/layouts/default}}
+{{!--  --}}

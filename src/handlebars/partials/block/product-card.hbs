@@ -1,0 +1,16 @@
+<div class="c-product-card">
+    <div class="c-product-card__img-container">
+        <img src="../../../assets/images/sample-product.jpg" class="c-product-card__img" alt="">
+        <div class="c-product-card__badge">
+            {{#>block/pill class="c-pill--secondary"}}Oferta{{/block/pill}}
+        </div>
+    </div>
+    <div class="c-product-card__details">
+        <p class="c-product-card__name">Frutos Secos</p>
+        {{>block/price-tag}}
+    </div>
+    <div class="c-product-card__bottom">
+        {{>block/counter}}
+        {{#>block/btn class="c-btn--icon-only c-product-card__cart-btn"}} <img src="../../../assets/icons/cart-icon-white.svg" alt="" class="c-icon--40">{{/block/btn}}
+    </div>
+</div>
