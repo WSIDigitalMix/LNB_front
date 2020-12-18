@@ -11,8 +11,6 @@ const App = function () {
                 return
             }
 
-            console.log(elements);
-
             let instances = Array.from(elements).map(element =>
                 new comp.create(element).init()
             )

@@ -1,0 +1,22 @@
+$ns: $iota-global-components-namespace;
+
+.#{$ns}cart-button {
+    @extend .u-p2;
+    @include roundedCorners;
+    @include transition(background-color box-shadow);
+    background-color: transparent;
+
+    cursor: pointer;
+    user-select: none;
+
+    &:hover,
+    &:focus {
+        background-color: rgba($color: clr('black'), $alpha: .1);
+    }
+
+    &:active {
+        box-shadow: 1px 3px 5px rgba($color: clr('black'), $alpha: .5);
+        background-color: transparent;
+        outline: none;
+    }
+}

@@ -4,17 +4,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/fonts/oswald/Oswald.css" />
+    <link rel="stylesheet" href="/fonts/inter/Inter.css" />
 
     <title>LNB_FRONT: {{page}} </title>
 </head>
 
 <body class="">
 
-    <header class="u-bgcolor-primary u-color-white u-pv1">
-        <div class="o-container">
-            <h1 class="o-type-h3">LNB_FRONT</h1>
-            <h2 class="o-type-h4">{{page}}</h2>
+    <header class="u-color-primary u-p3 u-p5@md">
+        <div class="u-flex u-ai-center">
+            <div class="u-mr2 c-nav-menu__toggler-container">
+                <div class="js-nav-overlay"></div>
+                <button class="c-btn c-btn--icon-only js-nav-toggler">
+                    <img src="../../../assets/icons/menu-icon-white.svg" class="c-icon" alt="">
+                </button>
+            </div>
+            <div class="o-type-h2">Market</div>
+            <div class="u-mlauto">
+                <button class="c-cart-button">
+                    <div class="c-price-tag">
+                        <div class="c-price-tag__tag">
+                            $<span class="c-price-tag__fraction">258</span><span class="c-price-tag__cents">23</span>
+                        </div>
+                    </div>
+                    <img src="../../../assets/icons/cart-icon-red.svg" class="c-icon--40 c-icon--64@md" alt="Carrito">
+                </button>
+            </div>
         </div>
+        <div>
+            <div class="site-logo u-mt5">
+                <img src="../../../assets/images/lnb_logo.png" class="u-mhauto u-block" alt="La Niña Bonita">
+            </div>
+        </div>
+        <nav class="c-nav-menu js-nav u-mt5@lg"> 
+            <ul class="c-nav-menu__list">
+                <li class="c-nav-menu__item c-nav-menu__parent-item js-nav-submenu">
+                    <div class="c-nav-menu__submenu-head js-nav-submenu-toggler">
+                        <div class="c-nav-menu__submenu-overlay js-nav-submenu-overlay"></div>
+                        <a class="c-nav-menu__link">Market</a>
+                        {{!-- <button class="c-nav-menu__submenu-toggler "></button> --}}
+                    </div>
+                    <div class="c-nav-menu__submenu-content js-nav-submenu-content">
+                        <ul class="c-nav-menu__list">
+                            <li class="c-nav-menu__item">
+                                <a class="c-nav-menu__link" href="#">Frutas</a>
+                            </li>
+                            <li class="c-nav-menu__item">
+                                <a class="c-nav-menu__link" href="#">Verduras</a>
+                            </li>
+                            <li class="c-nav-menu__item">
+                                <a class="c-nav-menu__link" href="#">Otros</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="c-nav-menu__item">
+                    <a class="c-nav-menu__link" href="#">Nosotros</a>
+                </li>
+                <li class="c-nav-menu__item">
+                    <a class="c-nav-menu__link" href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
     </header>
 
     {{> @partial-block}}

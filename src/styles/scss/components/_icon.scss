@@ -13,4 +13,21 @@ $ns: $iota-global-components-namespace;
         width: 64px;
         min-width: 64px;
     }
+
+    @include iota-breakpoint('md') {
+        &\@md {
+            width: 24px;
+            min-width: 24px;
+        }
+        
+        &--40\@md {
+            width: 40px;
+            min-width: 40px;
+        }
+    
+        &--64\@md {
+            width: 64px;
+            min-width: 64px;
+        }
+    }
 }

@@ -21,6 +21,7 @@
 @import 'mixins/transitions';
 @import 'mixins/roundedCorners';
 @import 'mixins/borders';
+@import 'mixins/boxShadow';
 
 @import 'tools/core';
 @import 'tools/breakpoint';
@@ -30,6 +31,7 @@
 @import 'base/initialize';
 @import 'base/body';
 @import 'base/base';
+@import 'base/headings';
 
 @import 'layout/footer';
 
@@ -41,6 +43,9 @@
 @import 'components/pill';
 @import 'components/slider';
 @import 'components/dot-heading';
+@import 'components/cart-button';
+@import 'components/accordion';
+@import 'components/nav-menu';
 
 @import 'objects/container';
 @import 'objects/type';

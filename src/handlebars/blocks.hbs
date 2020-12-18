@@ -108,27 +108,49 @@
     {{/struct/grid_card}}
 
     {{!-- ICON MEDIA BLOCK AND GRID OF ICON MEDIA BLOCKS --}}
-    {{#>struct/grid_card}}
-
-        <div class="o-grid__col u-flex u-jc-center u-bgcolor-primary u-p3@md u-p1">
-            <div class="o-grid o-grid--center o-grid--g2 u-jc-center u-5/6@lg u-m0 u-pb4">
-                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Seleccioná tu producto</div>{{/block/icon-media}}</div>
-                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Lorem ipsum dolor sit. Lorem</div>{{/block/icon-media}}</div>
-                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Excepturi ab architecto magni accusamus</div>{{/block/icon-media}}</div>
-                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">itaque? Dignissimos, suscipit</div>{{/block/icon-media}}</div>
-                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">sit amet consectetur adipisicing elit</div>{{/block/icon-media}}</div>
-                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">{{#>block/icon-media iconClass='c-icon--64'}}<div class="o-type-inline">Lorem ipsum</div>{{/block/icon-media}}</div>
+    
+    <div class="u-bgcolor-primary">
+        <div class="o-container">
+            <div class="o-grid o-grid--center o-grid--g2 u-jc-center u-pb4">
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Seleccioná tu producto</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Lorem ipsum dolor sit. Lorem</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Excepturi ab architecto magni accusamus</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">itaque? Dignissimos, suscipit</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">sit amet consectetur adipisicing elit</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Lorem ipsum</div>
+                    {{/block/icon-media}}
+                </div>
             </div>
         </div>
-
-    {{/struct/grid_card}}
-
+    </div>
 
     {{!-- ICON MEDIA BLOCK SMALL ICON --}}
     {{#>struct/grid_card}}
 
         <div class="o-grid__col u-flex u-jc-center u-bgcolor-primary u-p3">
-            {{#>block/icon-media iconClass='c-icon--40'}}Lorem ipsum{{/block/icon-media}}
+            {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--40'}}<span class="u-color-white">Lorem ipsum</span>{{/block/icon-media}}
         </div>
 
     {{/struct/grid_card}}

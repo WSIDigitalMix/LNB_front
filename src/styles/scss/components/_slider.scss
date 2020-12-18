@@ -94,4 +94,8 @@
 	@include iota-breakpoint('md') {
 		background-color: transparent;
 	}
+
+	@include iota-breakpoint('lg') {
+		height: 550px;
+	}
 }

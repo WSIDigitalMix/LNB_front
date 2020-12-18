@@ -2,7 +2,7 @@ $ns: $iota-global-components-namespace;
 
 .#{$ns}dot-heading{
     position: relative;
-    padding-left: 32px;
+    padding-left: 16px;
     text-align: center;
     display: inline-block;
 
@@ -21,17 +21,24 @@ $ns: $iota-global-components-namespace;
 
     &--dot-below {
         padding-left: 0;
-        padding-bottom: 32px;
+        padding-bottom: 16px;
 
         &::before {
             top: auto;
-            bottom: 0;
+            bottom: -10px;
             left: 50%;
             transform: translateX(-50%);
         }
     }
 
     @include iota-breakpoint('md'){
+        padding-left: 32px;
+
+        &--dot-below {
+            padding-left: 0;
+            padding-bottom: 32px;
+        }
+
         &::before {
             font-size: 3rem;
         }

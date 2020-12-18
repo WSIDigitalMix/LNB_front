@@ -18,8 +18,8 @@ $iota-objs-container-namespace: 'container';
  */
 
 $iota-objs-container-gutter-default: (
-    null    : $iota-global-gutter-default,
-    md      : $iota-global-gutter-default * 2
+    null    : $baseline1,
+    md      : $baseline2
 );
 
 

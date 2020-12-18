@@ -1,0 +1,16 @@
+.js-accordion {
+    &-content {
+        @include transition($properties: max-height opacity,$speed: 0.3s);
+
+        max-height: 0;
+        overflow: hidden;
+        
+        @at-root .js-accordion-item.open & {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        @at-root .js-accordion-item.close & {
+            opacity: 0;
+        }
+    }
+}

@@ -1,7 +1,55 @@
 {{#> layouts/default page='Home'}}
 
-<section class="u-bgcolor-white u-color-black u-pv3">
+<section class="u-mt4">
+    {{>block/slider}}
+</section>
+<section class="u-bgcolor-primary">
+    <div class="o-container u-pv4 u-pv5@lg u-ph5">
+            <div class="u-text-center">
+                <h2 class="o-type-h2 c-dot-heading c-dot-heading--dot-below">CÓMO <b>COMPRAR</b></h2>
+            </div>
+            <div class="o-grid o-grid--center o-grid--g2 u-jc-center">
+                <div class="o-grid__col u-text-center u-text-left@md u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/basket-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Seleccioná tu producto</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-text-center u-text-left@md u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/cart-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Clickeá en tu carrito</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-text-center u-text-left@md u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/pencil-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Completá tus datos</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-text-center u-text-left@md u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/shopping-bag-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Seleccioná tu compra</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-text-center u-text-left@md u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/payment-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Elegí tu método de pago</div>
+                    {{/block/icon-media}}
+                </div>
+                <div class="o-grid__col u-text-center u-text-left@md u-1/4@xl u-1/3@lg u-2/4@md u-mt4">
+                    {{#>block/icon-media iconSrc="../assets/icons/check-mark-icon-white.svg" iconClass='c-icon--64'}}
+                        <div class="o-type-inline u-color-white">Confirmá tu compra</div>
+                    {{/block/icon-media}}
+                </div>
+            </div>
+        </div>
+</section>
 
+<section class="o-container u-color-black u-pv4 u-pv5@lg">
+    <div class="u-text-center">
+        <h3 class="o-type-h2 c-dot-heading c-dot-heading--dot-below">Recomendados</h3>
+    </div>
+    <div>
+        
+    </div>
 </section>
 
 {{/layouts/default}}
